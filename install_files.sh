@@ -13,5 +13,3 @@ ln -s $(pwd)/init.vim ~/.config/nvim/init.vim
 # vimplug for neovim
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-# TOOD(jmanela): tmux (add tmux stuff here)
