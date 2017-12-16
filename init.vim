@@ -8,7 +8,6 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
-Plug 'altercation/vim-colors-solarized'
 Plug 'vim-airline/vim-airline'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'Valloric/YouCompleteMe'
@@ -60,11 +59,6 @@ syntax on
 
 " This disables the "Press enter to continue" prompts
 set cmdheight=2
-
-" Way easier on my eyes.  I don't use solarized on my desktop.
-" set background=dark
-" colorscheme solarized
-" colorscheme desert
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 ""INDENT"""""""""""""""""""""""""""""""""""""""""""""""""""""
