@@ -1,5 +1,5 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""VUNDLE"""""""""""""""""""""""""""""""""""""""""""""""""""""
+""VIM PLUG"""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -8,13 +8,14 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
-Plug 'easymotion/vim-easymotion'
 Plug 'altercation/vim-colors-solarized'
 Plug 'vim-airline/vim-airline'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'Valloric/YouCompleteMe'
 Plug 'mhinz/vim-grepper'
 Plug 'djoshea/vim-autoread'
+Plug 'yegappan/mru'
+Plug 'jeetsukumaran/vim-buffergator'
 
 " All of your Plugins must be added before the following line
 call plug#end()            " required
@@ -29,7 +30,7 @@ call plug#end()            " required
 " user@computer: sudo pip3 install --upgrade neovim
 "
 "let g:ycm_global_ycm_extra_conf = '/home/jmanela/.config/nvim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
-let g:ycm_global_ycm_extra_conf = '/home/jmanela/.config/nvim/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '/home/juicedatom/.config/nvim/.ycm_extra_conf.py'
 let g:ycm_allow_changing_updatetime = 0
 let g:ycm_enable_diagnostic_highlighting = 0
 let g:ycm_collect_identifiers_from_tags_files = 1
@@ -96,37 +97,3 @@ set clipboard=unnamedplus
 " Exit terminal mode (neovim)
 tnoremap <Esc> <C-\><C-n>
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""BUFFER"""""""""""""""""""""""""""""""""""""""""""""""""""""
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-function! BufSel(pattern)
-  let bufcount = bufnr("$")
-  let currbufnr = 1
-  let nummatches = 0
-  let firstmatchingbufnr = 0
-  while currbufnr <= bufcount
-    if(bufexists(currbufnr))
-      let currbufname = bufname(currbufnr)
-      if(match(currbufname, a:pattern) > -1)
-        echo currbufnr . ": ". bufname(currbufnr)
-        let nummatches += 1
-        let firstmatchingbufnr = currbufnr
-      endif
-    endif
-    let currbufnr = currbufnr + 1
-  endwhile
-  if(nummatches == 1)
-    execute ":buffer ". firstmatchingbufnr
-  elseif(nummatches > 1)
-    let desiredbufnr = input("Enter buffer number: ")
-    if(strlen(desiredbufnr) != 0)
-      execute ":buffer ". desiredbufnr
-    endif
-  else
-    echo "No matching buffers"
-  endif
-endfunction
-
-"Bind the BufSel() function to a user-command
-command! -nargs=1 Bs :call BufSel("<args>")
