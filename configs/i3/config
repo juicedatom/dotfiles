@@ -175,6 +175,8 @@ exec "/usr/bin/pasystray &"
 
 exec --no-startup-id "nm-applet --sd-disable &"
 
+exec "xscreensaver -nosplash &"
+
 set $transparent #00000000
 
 # Start i3bar to display a workspace bar (plus the system information i3status
