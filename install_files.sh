@@ -10,7 +10,7 @@
 
 # neovim
 # TODO(juicedatom) -- Add safety checks.
-ln -s $(pwd)/nvim ~/.config/nvim
+ln -s $(pwd)/configs/nvim ~/.config/nvim
 
 # vimplug for neovim
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
