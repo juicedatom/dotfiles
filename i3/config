@@ -11,7 +11,7 @@
 
 set $mod Mod4
 
-set $script_location ~/code/helper_scripts/i3_scripts
+set $script_location ~/.config/i3/scripts
 
 # sound and stuff
 # bindsym XF86AudioRaiseVolume exec pactl set-sink-volume $(pacmd list-sinks | awk '/* index:/{print $3}') +5%
