@@ -20,10 +20,7 @@ Plug 'rbgrouleff/bclose.vim'
 " All of your Plugins must be added before the following line
 call plug#end()            " required
 
-" let ranger replace netrw
-let g:ranger_replace_netrw = 1
-
-command Ex RangerCurrentDirectory
+command! Ex RangerCurrentDirectory
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 ""YCM and Tags"""""""""""""""""""""""""""""""""""""""""""""""
