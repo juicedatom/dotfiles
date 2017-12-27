@@ -89,6 +89,8 @@ set autoindent
 ""OTHER""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+set background=dark
+
 " Display line numbers
 set number
 set ruler
