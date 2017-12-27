@@ -162,20 +162,20 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-# Desktop background.
-exec "feh --bg-scale /home/juicedatom/Pictures/background/moonthing.jpg &"
-
-# transparency
-exec "compton &"
-
 bindsym $mod+r mode "resize"
 
+# Desktop background.
+exec --no-startup-id "feh --bg-scale /home/juicedatom/Pictures/background/moonthing.jpg"
+
+# transparency
+exec --no-startup-id "compton"
+
 # Setup sound icon.
-exec "/usr/bin/pasystray &"
+exec --no-startup-id "/usr/bin/pasystray"
 
-exec --no-startup-id "nm-applet --sd-disable &"
+exec --no-startup-id "nm-applet --sd-disable"
 
-exec "xscreensaver -nosplash &"
+exec --no-startup-id "xscreensaver -nosplash"
 
 set $transparent #00000000
 
