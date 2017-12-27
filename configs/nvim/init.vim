@@ -7,7 +7,6 @@ filetype off                  " required
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'tpope/vim-fugitive'
-Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'Valloric/YouCompleteMe'
@@ -15,9 +14,16 @@ Plug 'mhinz/vim-grepper'
 Plug 'djoshea/vim-autoread'
 Plug 'yegappan/mru'
 Plug 'jeetsukumaran/vim-buffergator'
+Plug 'francoiscabrol/ranger.vim'
+Plug 'rbgrouleff/bclose.vim'
 
 " All of your Plugins must be added before the following line
 call plug#end()            " required
+
+" let ranger replace netrw
+let g:ranger_replace_netrw = 1
+
+command Ex RangerCurrentDirectory
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 ""YCM and Tags"""""""""""""""""""""""""""""""""""""""""""""""
@@ -104,4 +110,5 @@ set clipboard=unnamedplus
 
 " Exit terminal mode (neovim)
 tnoremap <Esc> <C-\><C-n>
+
 
