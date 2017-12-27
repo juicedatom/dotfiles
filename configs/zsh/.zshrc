@@ -68,7 +68,7 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-alias vim="nvim +Ranger"
+alias vim="nvim"
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
