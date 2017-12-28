@@ -150,6 +150,12 @@ separator=false
 separator_block_width=10
 color=#F4C842
 
+[display]
+full_text=
+command=arandr
+separator=false
+separator_block_width=10
+
 ##[clickme]
 ##full_text=Click me!
 ##command=echo button=$BLOCK_BUTTON x=$BLOCK_X y=$BLOCK_Y

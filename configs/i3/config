@@ -39,7 +39,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec rofi -show run -theme solarized -font "mono 24" 
 
 # start rofi (a program launcher)
-bindsym $mod+Tab exec rofi -show window -theme solarized -font "mono 24" 
+bindsym $mod+shift+d exec rofi -show window -theme solarized -font "mono 24" 
 
 # change focus
 bindsym $mod+h focus left
@@ -116,6 +116,10 @@ bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws0
 bindsym $mod+minus workspace $ws-
 bindsym $mod+plus workspace $ws+
+
+# Switch between next and previous workspaces.
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
