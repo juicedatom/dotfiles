@@ -165,7 +165,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Desktop background.
-exec --no-startup-id "feh --bg-scale /home/juicedatom/Pictures/background/moonthing.jpg"
+exec --no-startup-id feh --bg-scale /home/juicedatom/Pictures/background/moonthing.jpg
 
 # transparency
 exec --no-startup-id compton
