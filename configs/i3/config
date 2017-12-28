@@ -165,7 +165,10 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Desktop background.
-exec --no-startup-id feh --bg-scale /home/juicedatom/Pictures/background/moonthing.jpg
+#exec --no-startup-id feh --bg-scale /home/juicedatom/Pictures/background/vangogh.jpg
+#exec --no-startup-id feh --bg-scale /home/juicedatom/Pictures/background/moonthing.jpg
+#exec --no-startup-id feh --bg-scale /home/juicedatom/Pictures/background/sky.jpg
+exec --no-startup-id feh --bg-scale /home/juicedatom/Pictures/background/space_planets.jpg
 
 # transparency
 exec --no-startup-id compton
@@ -186,5 +189,10 @@ bar {
         colors{
            background #23232300
            statusline #DCDCDC00
+           #                  border  backgr. text
+           focused_workspace  #4c789900 #28557700 #ffffff
+           active_workspace   #33333300 #5f676a00 #ffffff
+           inactive_workspace #33333300 #22222200 #888888
+           urgent_workspace   #2f343a00 #90000000 #ffffff
         }
 }
