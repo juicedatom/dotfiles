@@ -2,7 +2,7 @@
 #allow_bold = true
 #audible_bell = false
 #clickable_url = true
-#dynamic_title = true
+dynamic_title = true
 font = Monospace 18
 #fullscreen = true
 #geometry = 640x480
