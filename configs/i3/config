@@ -3,11 +3,19 @@ set $mod Mod4
 set $script_location ~/.config/i3/scripts
 
 # sound and stuff
-bindsym XF86AudioRaiseVolume exec $script_location/ChangeVolume.sh +5%
-bindsym XF86AudioLowerVolume exec $script_location/ChangeVolume.sh -5%
+bindsym XF86AudioRaiseVolume exec $script_location/ChangeVolume.sh +1%
+bindsym Shift+XF86AudioRaiseVolume exec $script_location/ChangeVolume.sh +10%
+
+bindsym XF86AudioLowerVolume exec $script_location/ChangeVolume.sh -1%
+bindsym Shift+XF86AudioLowerVolume exec $script_location/ChangeVolume.sh -10%
+
 bindsym XF86AudioMute exec $script_location/ToggleVolume.sh
-bindsym XF86MonBrightnessDown exec $script_location/ChangeLight.sh -5
-bindsym XF86MonBrightnessUp exec $script_location/ChangeLight.sh 5
+
+bindsym XF86MonBrightnessDown exec $script_location/ChangeLight.sh -1
+bindsym Shift+XF86MonBrightnessDown exec $script_location/ChangeLight.sh -10
+
+bindsym XF86MonBrightnessUp exec $script_location/ChangeLight.sh 1
+bindsym Shift+XF86MonBrightnessUp exec $script_location/ChangeLight.sh 10
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
