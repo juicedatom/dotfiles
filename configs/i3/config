@@ -168,11 +168,8 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Desktop background.
-#exec --no-startup-id feh --bg-scale /home/juicedatom/Pictures/background/vangogh.jpg
-#exec --no-startup-id feh --bg-scale /home/juicedatom/Pictures/background/moonthing.jpg
-#exec --no-startup-id feh --bg-scale /home/juicedatom/Pictures/background/sky.jpg
-exec --no-startup-id feh --bg-scale /home/juicedatom/Pictures/background/space_planets.jpg
+# Randomy pick a desktop background from a list of backgrounds.
+exec --no-startup-id $script_location/choose_background.py
 
 # transparency
 exec --no-startup-id compton
@@ -187,6 +184,7 @@ exec --no-startup-id nm-applet --sd-disable
 exec --no-startup-id xscreensaver -nosplash
 
 bar {
+        font pango:Awesome 30px
         i3bar_command i3bar -t
         status_command i3blocks
         position top
