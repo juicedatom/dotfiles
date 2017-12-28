@@ -46,13 +46,11 @@ signal=1
 # The type defaults to "mem" if the instance is not specified.
 [memory]
 label=✍
-#separator=false
 interval=30
 
 [memory]
 label=⇄
 instance=swap
-#separator=false
 interval=30
 
 # Disk usage
@@ -73,12 +71,11 @@ interval=30
 label=☎
 #instance=wlan0
 interval=10
-#separator=false
 
-#[wifi]
-##instance=wlp3s0
-#interval=10
-##separator=false
+[wifi]
+label=
+instance=wlp2s0
+interval=10
 
 ## [bandwidth]
 ## #instance=eth0
@@ -91,8 +88,6 @@ interval=10
 [cpu_usage]
 label=⚙
 interval=10
-# min_width=⚙: 100.00%
-#separator=false
 
 [load_average]
 interval=10
@@ -136,16 +131,16 @@ interval=10
 label=
 
 # logout script.  Asks the user if they want to logout.
-[shutdown]
+[shutdown.sh]
 full_text=
-command=~/.config/i3blocks/blocks/shutdown.sh
+command=~/.config/i3blocks/blocks/$BLOCK_NAME
 separator=false
 separator_block_width=10
 color=#FF8888
 
-[lock]
+[lock.sh]
 full_text=
-command=~/.config/i3blocks/blocks/lock.sh
+command=~/.config/i3blocks/blocks/$BLOCK_NAME
 separator=false
 separator_block_width=10
 color=#F4C842
