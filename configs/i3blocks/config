@@ -61,7 +61,7 @@ interval=30
 # The script may be called with a optional argument to set the alert
 # (defaults to 10 for 10%).
 [disk]
-label=⌂
+label=
 #instance=/mnt/data
 interval=30
 
@@ -94,8 +94,8 @@ interval=10
 # min_width=⚙: 100.00%
 #separator=false
 
-#[load_average]
-#interval=10
+[load_average]
+interval=10
 
 # Battery indicator
 #
@@ -133,4 +133,26 @@ signal=2
 # see the script for details.
 [temperature]
 interval=10
+label=
+
+# logout script.  Asks the user if they want to logout.
+[shutdown]
+full_text=
+command=~/.config/i3blocks/blocks/shutdown.sh
+separator=false
+separator_block_width=10
+color=#FF8888
+
+[lock]
+full_text=
+command=~/.config/i3blocks/blocks/lock.sh
+separator=false
+separator_block_width=10
+color=#F4C842
+
+##[clickme]
+##full_text=Click me!
+##command=echo button=$BLOCK_BUTTON x=$BLOCK_X y=$BLOCK_Y
+##min_width=button=1 x=1366 y=768
+##align=left
 
