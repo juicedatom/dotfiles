@@ -80,6 +80,29 @@ fi
 # vim mode
 bindkey -v
 
+# Mimic emacs mode in vi mode.
+bindkey '^P' up-history
+bindkey '^N' down-history
+
+# backspace and ^h working even after
+# returning from command mode
+bindkey '^?' backward-delete-char
+bindkey '^h' backward-delete-char
+
+# ctrl-w removed word backwards
+bindkey '^w' backward-kill-word
+
+# ctrl-r starts searching history backward
+bindkey '^r' history-incremental-search-backward
+
+# history lookup with rofi.
+function billybobjoe
+{
+  command $(fc -ln -10000 | rofi -dmenu -theme solarized -font "mono 24")
+}
+#zle -N billybobjoe
+#bindkey '^r' billybobjoe
+
 # Source misc. i3 configs.
 source ~/.config/i3/scripts/misc.sh
 

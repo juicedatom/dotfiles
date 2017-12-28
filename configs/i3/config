@@ -2,18 +2,22 @@ set $mod Mod4
 
 set $script_location ~/.config/i3/scripts
 
-# sound and stuff
+# Increase Volume (fine and coarse).
 bindsym XF86AudioRaiseVolume exec $script_location/ChangeVolume.sh +1%
 bindsym Shift+XF86AudioRaiseVolume exec $script_location/ChangeVolume.sh +10%
 
+# Decrease Volume (fine and coarse).
 bindsym XF86AudioLowerVolume exec $script_location/ChangeVolume.sh -1%
 bindsym Shift+XF86AudioLowerVolume exec $script_location/ChangeVolume.sh -10%
 
+# Mute.
 bindsym XF86AudioMute exec $script_location/ToggleVolume.sh
 
+# Decrease brightness (fine and coarse).
 bindsym XF86MonBrightnessDown exec $script_location/ChangeLight.sh -1
 bindsym Shift+XF86MonBrightnessDown exec $script_location/ChangeLight.sh -10
 
+# Increase brightness (fine and coarse).
 bindsym XF86MonBrightnessUp exec $script_location/ChangeLight.sh 1
 bindsym Shift+XF86MonBrightnessUp exec $script_location/ChangeLight.sh 10
 
@@ -91,18 +95,18 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-set $ws1 ╘═ 1 ══╕
-set $ws2 ╘═ 2 ══╕
-set $ws3 ╘═ 3 ══╕
-set $ws4 ╘═ 4 ══╕
-set $ws5 ╘═ 5 ══╕
-set $ws6 ╘═ 6 ══╕
-set $ws7 ╘═ 7 ══╕
-set $ws8 ╘═ 8 ══╕
-set $ws9 ╘═ 9 ══╕
-set $ws0 ╘═ 0 ══╕
-set $ws- ╘═ - ══╕
-set $ws+ ╘═ + ══╕
+set $ws1 ╘═ 1   ══╕
+set $ws2 ╘═ 2   ══╕
+set $ws3 ╘═ 3   ══╕
+set $ws4 ╘═ 4   ══╕
+set $ws5 ╘═ 5   ══╕
+set $ws6 ╘═ 6   ══╕
+set $ws7 ╘═ 7   ══╕
+set $ws8 ╘═ 8   ══╕
+set $ws9 ╘═ 9   ══╕
+set $ws0 ╘═ 0   ══╕
+set $ws- ╘═ -   ══╕
+set $ws+ ╘═ +   ══╕
 
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
@@ -180,8 +184,9 @@ exec --no-startup-id /usr/bin/pasystray
 # Network manager applet.
 exec --no-startup-id nm-applet --sd-disable
 
-# Screensaver.
+## Screensaver.
 exec --no-startup-id xscreensaver -nosplash
+# exec --no-startup-id xautolock -time 1 -locker 'i3lock -c 111111'
 
 bar {
         font pango:Awesome 30px
