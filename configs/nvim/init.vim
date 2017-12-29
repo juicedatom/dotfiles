@@ -15,12 +15,14 @@ Plug 'djoshea/vim-autoread'
 Plug 'yegappan/mru'
 Plug 'jeetsukumaran/vim-buffergator'
 Plug 'francoiscabrol/ranger.vim'
-Plug 'rbgrouleff/bclose.vim'
 
 " All of your Plugins must be added before the following line
 call plug#end()            " required
 
 command! Ex RangerCurrentDirectory
+
+" Helper menu to look through wildcards.
+set wildmenu
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 ""YCM and Tags"""""""""""""""""""""""""""""""""""""""""""""""

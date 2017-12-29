@@ -71,7 +71,6 @@ interval=30
 label=☎
 #instance=wlan0
 interval=10
-
 [wifi]
 label=
 instance=wlp2s0
