@@ -81,6 +81,9 @@ fi
 bindkey -v
 
 # Mimic emacs mode in vi mode.
+bindkey '^e' end-of-line
+bindkey '^a' beginning-of-line
+
 bindkey '^P' up-history
 bindkey '^N' down-history
 
