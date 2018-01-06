@@ -15,6 +15,8 @@ Plug 'djoshea/vim-autoread'
 Plug 'yegappan/mru'
 Plug 'jeetsukumaran/vim-buffergator'
 Plug 'francoiscabrol/ranger.vim'
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 " All of your Plugins must be added before the following line
 call plug#end()            " required

@@ -109,3 +109,5 @@ function billybobjoe
 # Source misc. i3 configs.
 source ~/.config/i3/scripts/misc.sh
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
